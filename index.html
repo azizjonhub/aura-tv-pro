@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA TV | Cinematic Streaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">AURA<span>TV</span></div>
+    </header>
+
+    <main>
+        <!-- Stories (Circles) -->
+        <section class="stories-section" id="stories-row"></section>
+
+        <!-- Hero Banner -->
+        <section class="hero-container">
+            <div class="hero-banner"
+                style="background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200');">
+                <div class="hero-title-box">
+                    <h2>MONARX: MAXLUQLAR MEROSI</h2>
+                    <p>Monarx: Maxluqlar merosi haqida epik sarguzasht.</p>
+                </div>
+            </div>
+            <div class="dots-indicator">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Janrlar -->
+        <div class="section-header">
+            <h3>Janrlar</h3>
+        </div>
+        <section class="genre-row" id="genre-grid"></section>
+
+        <!-- Tarjima kinolar -->
+        <div class="section-header">
+            <h3>Tarjima kinolar</h3>
+            <a href="#" class="more-link">Barchasini ko'rish &rsaquo;</a>
+        </div>
+        <section class="movie-grid" id="row-translated"></section>
+
+        <!-- Premyeralar -->
+        <div class="section-header">
+            <h3>Premyera</h3>
+            <a href="#" class="more-link">Barchasini ko'rish &rsaquo;</a>
+        </div>
+        <section class="movie-grid" id="row-premiere"></section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-tabs">
+        <a href="#" class="tab-link active"><i>🏠</i>Asosiy</a>
+        <a href="#" class="tab-link"><i>🔍</i>Qidiruv</a>
+        <a href="#" class="tab-link"><i>📚</i>Kolleksiya</a>
+        <a href="#" class="tab-link"><i>📺</i>TV</a>
+        <a href="admin.html" class="tab-link"><i>👤</i>Profil</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

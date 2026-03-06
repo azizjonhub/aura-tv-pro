@@ -1,0 +1,339 @@
+:root {
+    --bg-black: #000000;
+    --text-white: #ffffff;
+    --text-muted: #8E8E93;
+    --accent-red: #E50914;
+    --premium-gold: #FFD700;
+    --free-blue: #00D2FF;
+    --font-main: 'Outfit', sans-serif;
+    --glass-footer: rgba(18, 18, 18, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+/* Header */
+.header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: #fff;
+}
+
+/* Stories - Horizontal Scroll */
+.stories-section {
+    padding: 10px 0 20px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-left: 20px;
+}
+
+.stories-section::-webkit-scrollbar {
+    display: none;
+}
+
+.story-item {
+    text-align: center;
+    min-width: 80px;
+}
+
+.story-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    padding: 2.5px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    margin: 0 auto 8px;
+}
+
+.story-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000;
+}
+
+.story-item span {
+    font-size: 11px;
+    color: #fff;
+    opacity: 0.9;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Featured Hero Banner */
+.hero-container {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.hero-banner {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+}
+
+.hero-title-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title-box h2 {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #00D2FF;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.hero-title-box p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.dots-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.dot.active {
+    background: #FF3B30;
+    width: 18px;
+    border-radius: 10px;
+}
+
+/* Category Sections */
+.section-header {
+    padding: 0 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section-header .more-link {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+/* Janrlar Row */
+.genre-row {
+    padding: 0 0 30px 20px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.genre-row::-webkit-scrollbar {
+    display: none;
+}
+
+.genre-card {
+    min-width: 140px;
+    height: 90px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.genre-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.genre-card span {
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Movie Posters Grid */
+.movie-grid {
+    padding: 0 0 40px 20px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.movie-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-item {
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.poster-wrapper {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--premium-gold);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.free-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+
+.movie-item h4 {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 2px;
+}
+
+/* Bottom Tab Bar */
+.bottom-tabs {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 480px;
+    background: var(--glass-footer);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tab-link {
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 10px;
+    flex: 1;
+}
+
+.tab-link i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.tab-link.active {
+    color: #fff;
+}
+
+/* Utilities */
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        aspect-ratio: 16/11;
+    }
+
+    .movie-item {
+        min-width: 140px;
+    }
+}
